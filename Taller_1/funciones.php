@@ -70,4 +70,17 @@
         }
         return $resultados; //se retorna los resultados
     }
+
+    function PresupuestoHospital($pre){
+
+
+
+    }
+
+    function estacionAno(){
+
+
+
+        
+    }
 ?>
