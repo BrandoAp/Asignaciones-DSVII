@@ -77,10 +77,20 @@
 
     }
 
-    function estacionAno(){
+    function estacionAno($dia, $mes){
+        $fecha = intval(sprintf("%02d%02d", $mes, $dia));
 
+        if($fecha >= 1221 || $fecha <= 320) {
+            return "Verano";
+        } else if($fecha >= 321|| $fecha <= 621) {
+            return "Otoño";
+        } elseif($fecha >= 622|| $fecha <= 922) {
+            return "Invierno";
+        } elseif($fecha >= 923|| $fecha <= 1220) {
+            return "Primavera";
+        } else {
+            return "FECHA INVALIDA";
+        }
 
-
-        
     }
 ?>
