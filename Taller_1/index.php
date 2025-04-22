@@ -31,7 +31,7 @@
       grid-row: span 5 / span 5;
       border-radius: 1rem;
       padding: 0.5rem;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+      box-shadow: rgba(150, 149, 149, 0.24) 0px 3px 8px;;
     }
 
     .div2 {
@@ -42,6 +42,21 @@
       border-radius: 1rem;
       padding: 0.5rem;
       box-shadow: rgba(150, 149, 149, 0.24) 0px 3px 8px;
+    }
+
+    ul{
+
+      list-style-type: none;
+      font-weight: bold;
+    }
+
+    li{
+      color: white;
+    }
+
+    a{
+      color: white;
+      text-decoration: none;
     }
   </style>
   <body>
@@ -61,6 +76,10 @@
       </div>
       <div class="div2">
         <h2>Lista de Problemas</h2>
+        <ul>
+          <li><a href="problema1.php">Problema 1</a></li>
+          <li><a href="problema2.php">Problema 2</a></li>
+        </ul>
       </div>
     </div>
   </body>
