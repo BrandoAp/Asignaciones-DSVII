@@ -79,6 +79,9 @@
         <ul>
           <li><a href="problema1.php">Problema 1</a></li>
           <li><a href="problema2.php">Problema 2</a></li>
+          <li><a href="problema3.php">Problema 3</a></li>
+          <li><a href="problema4.php">Problema 4</a></li>
+          <li><a href="problema5.php">Problema 5</a></li>
         </ul>
       </div>
     </div>

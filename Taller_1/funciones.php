@@ -1,13 +1,13 @@
 <?php
     function calcularMedia($numeros){
         if(count($numeros) !== 5){ //Verifica que el arreglo contenga 5 números
-            return "Debes ingresar 5 números";
+            return "Debes ingresar 5 números"; //mensaje el usuario
         }
 
         $suma = 0;
         foreach ($numeros as $n) {
             if (!is_numeric($n) || $n <= 0){ //Se valida que el dato ingresado sea valido
-                return "Todos los valores deben ser números";
+                return "Todos los valores deben ser números"; //mensaje al usuario
             }
             $suma += $n; //Acumula la suma de los números ingresados
         }
@@ -17,11 +17,57 @@
     }
 
     function calcularSuma(){
-        $suma = 0;
-        for($i = 1; $i <= 1000; $i++){
-            $suma += $i;
+        $suma = 0; //Se inicializa el acumulador
+        for($i = 1; $i <= 1000; $i++){ //Se repite hasta llegar a 1000
+            $suma += $i; //Acumula la suma de los primeros 1000 números
         }
-        return "La suma de los números de 1 hasta 100 es: " . number_format($suma);
+        return "La suma de los números de 1 hasta 100 es: " . number_format($suma); //Salida el usuario formateda
     }
 
+    function calcularSuma10Pares() {
+        $suma = 0; //Se inicializa el acumulador en 0
+        $numero = 2; // Se inicializa el contador en 2
+        for ($i = 1; $i <= 10; $i++) { //se recorre los numeros de 1 al 10
+            $suma += $numero; //se acumula la suma de los numeros pares
+            $numero += 2; //se suma 2 para los numeros pares
+        }
+        return "La suma de los 10 primeros números pares es: $suma"; //mensaje el usuario con el resultado
+    }
+
+    function sumaParesEImpares() {
+        $sumaPares = 0; //se inicializa la variable en 0
+        $sumaImpares = 0; //se inicializa la variable en 0
+    
+        for ($i = 1; $i <= 200; $i++) {
+            if ($i % 2 == 0) { // si la condicion se cumple entra al bloque de instrucciones
+                $sumaPares += $i; //se suman los numeros pares
+            } else { //sino se cumple
+                $sumaImpares += $i; //se suman los numeros impares
+            }
+        }
+    
+        return [ //se retorna un arreglo asociativo
+            'pares' => $sumaPares,
+            'impares' => $sumaImpares
+        ];
+    }
+
+    function clasificarEdad($edades){
+        $resultados = []; //se inicializa un arreglo vacio
+        
+        foreach($edades as $edad){
+            if (!is_numeric($edad) || $edad < 0) { // se verifica que los datos sean validos
+                $resultados[] = "Edad inválida";
+            } elseif ($edad <= 12) { //si la edad es menor o igual a 12
+                $resultados[] = "Niño"; // se clasifica como niño dentro del arreglo
+            } elseif ($edad <= 17) { //si la edad es menor o igual a 17
+                $resultados[] = "Adolescente"; // se clasifica como adolescente
+            } elseif ($edad <= 64) { // si al edad es menor o igual a 64
+                $resultados[] = "Adulto"; //se clasifica como adulto
+            } else {
+                $resultados[] = "Adulto Mayor"; // de otro modo se clasifica como adulto mayor
+            }
+        }
+        return $resultados; //se retorna los resultados
+    }
 ?>
