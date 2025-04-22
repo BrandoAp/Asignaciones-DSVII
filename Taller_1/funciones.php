@@ -71,7 +71,21 @@
         return $resultados; //se retorna los resultados
     }
 
-    function PresupuestoHospital($pre){
+    function dividirPresupuesto($presupuesto){
+        $departamentos = [
+            'Ginecologia' => 0.40,
+            'Traumatologia' => 0.35,
+            'Pediatria' => 0.25,
+            
+        ];
+
+        $resultado = [];
+
+        foreach ($departamentos as $departamento => $porcentaje) {
+            $resultado[$departamento] = $presupuesto * $porcentaje; //se calcula el presupuesto de cada departamento
+        }
+
+        return $resultado; //se retorna el resultado
 
 
 
@@ -81,6 +95,44 @@
 
 
 
+
+    }
+
+
+    function Imprimir15Potencias(){
         
+    }
+
+
+    
+    function imprimirMultiplosDe4($n) {
+        for ($i = 1; $i <= $n; $i++) {
+        $resultado = 4 * $i;
+        echo "4 * $i = $resultado<br>";
+        }
+    }
+
+
+    function calcularEstadisticas($notas) {
+        $cantidad = count($notas);
+        $suma = array_sum($notas);
+        $promedio = $suma / $cantidad;
+    
+        $sumaCuadrados = 0;
+        foreach ($notas as $nota) {
+            $sumaCuadrados += pow($nota - $promedio, 2);
+        }
+        $desviacion = sqrt($sumaCuadrados / $cantidad);
+    
+        $min = min($notas);
+        $max = max($notas);
+    
+        echo '<div class="contenedor">';
+        echo "<h3>Resultados Estadísticos</h3>";
+        echo "<span>Promedio: " . round($promedio, 2) . "</span>";
+        echo "<span>Desviación Estándar: " . round($desviacion, 2) . "</span>";
+        echo "<span>Nota mínima: $min</span>";
+        echo "<span>Nota máxima: $max</span>";
+        echo '</div>';
     }
 ?>
