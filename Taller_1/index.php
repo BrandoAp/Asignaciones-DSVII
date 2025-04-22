@@ -84,6 +84,7 @@
           <li><a href="problema5.php">Problema 5</a></li>
           <li><a href="problema6.php">Problema 6</a></li>
           <li><a href="problema7.php">Problema 7</a></li>
+          <li><a href="problema8.php">Problema 8</a></li>
           <li><a href="problema9.php">Problema 9</a></li>
           <li><a href="problema10.php">Problema 10</a></li>
         </ul>
