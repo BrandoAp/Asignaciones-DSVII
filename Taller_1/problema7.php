@@ -65,6 +65,9 @@
 </head>
 
 <body>
+    <span>
+        <a href="index.php">Inicio</a>
+    </span>
 
 <h2>Calculadora de Datos Estadísticos</h2>
 
