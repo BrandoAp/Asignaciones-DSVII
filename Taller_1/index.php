@@ -70,7 +70,7 @@
             <h4>Materia: Desarrollo de Software VII</h3>
             <p>Profesora: Ing. Irina Fong</p>
             <p>Brando Avila   8 - 1010 - 1501</p>
-            <p>Gerald Rios    </p>
+            <p>Gerald Ríos  8-987-741  </p>
             <p>Grupo: 1GS133</p>
             <p>Año: 2025</p>
       </div>
