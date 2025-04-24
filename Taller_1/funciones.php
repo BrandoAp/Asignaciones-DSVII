@@ -56,7 +56,7 @@
         $resultados = []; //se inicializa un arreglo vacio
         
         foreach($edades as $edad){
-            if (!is_numeric($edad) || $edad < 0) { // se verifica que los datos sean validos
+            if (!is_numeric($edad) || $edad <= 0) { // se verifica que los datos sean validos
                 $resultados[] = "Edad inválida";
             } elseif ($edad <= 12) { //si la edad es menor o igual a 12
                 $resultados[] = "Niño"; // se clasifica como niño dentro del arreglo
@@ -91,22 +91,22 @@
 
     }
 
-    function estacionAno($dia, $mes){
+    function estacionAno($dia, $mes) {
         $fecha = intval(sprintf("%02d%02d", $mes, $dia));
-
-        if($fecha >= 1221 || $fecha <= 320) {
+    
+        if ($fecha >= 1221 || $fecha <= 320) {
             return "Verano";
-        } else if($fecha >= 321|| $fecha <= 621) {
+        } elseif ($fecha >= 321 && $fecha <= 621) {
             return "Otoño";
-        } elseif($fecha >= 622|| $fecha <= 922) {
+        } elseif ($fecha >= 622 && $fecha <= 922) {
             return "Invierno";
-        } elseif($fecha >= 923|| $fecha <= 1220) {
+        } elseif ($fecha >= 923 && $fecha <= 1220) {
             return "Primavera";
         } else {
-            return "FECHA INVALIDA";
+            return "Fecha inválida";
         }
-
     }
+    
 
 
     
