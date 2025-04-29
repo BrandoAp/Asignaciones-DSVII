@@ -34,4 +34,16 @@ class FarenheitCelcius {
         return ($this->farenheit - 32) * 5 / 9;
     }
 }
+
+class CelciusFarenheit {
+    private $celcius;
+
+    public function __construct($celcius) {
+        $this->celcius = $celcius;
+    }
+
+    public function convertir() {
+        return ($this->celcius * 9 / 5) + 32;
+    }
+}
 ?>
