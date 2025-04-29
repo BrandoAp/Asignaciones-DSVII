@@ -6,6 +6,9 @@
     <title>Fahrenheit a Celsius</title>
 </head>
 <body>
+    <h1>Conversor de Temperatura</h1>
+    <br>
+    <br>
     <h1>Conversor de Fahrenheit a Celsius</h1>
     <form method="post">
         <label for="farenheit">Grados Fahrenheit:</label>
