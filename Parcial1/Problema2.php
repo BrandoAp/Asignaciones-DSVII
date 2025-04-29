@@ -19,12 +19,13 @@
     <?php
     require_once 'calculos.php';
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['farenheit'])) {
         $farenheit = floatval($_POST['farenheit']);
         $convertidor = new FarenheitCelcius($farenheit);
         echo "<h2>Resultado:</h2>";
         echo "$farenheit °F es igual a " . number_format($convertidor->convertir(), 2) . " °C";
     }
+    
     ?>
 
     <h1>Conversor de Celsius a Fahrenheit</h1>
