@@ -1,8 +1,8 @@
 <?php   
 class person{
-    $name;
-    $surname;
-    $age;
+    public $name;
+    public $surname;
+    public $age;
 
 
     function __construct($name, $surname, $age) {
@@ -24,8 +24,11 @@ class person{
     }
 }
 
+$person1 = new person("Juan", "Pérez", 30);
 
-new person("Juan", "Pérez", 30);
+echo "Nombre: " . $person1->getName() . "<br>";
+echo "Apellido: " . $person1->getSurname() . "<br>";
+echo "Edad: " . $person1->getAge() . "<br>";
 
 
 
