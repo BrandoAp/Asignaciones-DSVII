@@ -56,19 +56,19 @@
         $resultados = []; //se inicializa un arreglo vacio
         
         foreach($edades as $edad){
-            if (!is_numeric($edad) || $edad <= 0) { // se verifica que los datos sean validos
+            if (!is_numeric($edad) || $edad <= 0) {
                 $resultados[] = "Edad inválida";
-            } elseif ($edad <= 12) { //si la edad es menor o igual a 12
-                $resultados[] = "Niño"; // se clasifica como niño dentro del arreglo
-            } elseif ($edad <= 17) { //si la edad es menor o igual a 17
-                $resultados[] = "Adolescente"; // se clasifica como adolescente
-            } elseif ($edad <= 64) { // si al edad es menor o igual a 64
-                $resultados[] = "Adulto"; //se clasifica como adulto
+            } elseif ($edad <= 12) { 
+                $resultados[] = "Niño";
+            } elseif ($edad <= 17) { 
+                $resultados[] = "Adolescente";
+            } elseif ($edad <= 64) { 
+                $resultados[] = "Adulto";
             } else {
-                $resultados[] = "Adulto Mayor"; // de otro modo se clasifica como adulto mayor
+                $resultados[] = "Adulto Mayor";
             }
         }
-        return $resultados; //se retorna los resultados
+        return $resultados;
     }
 
     function dividirPresupuesto($presupuesto){
